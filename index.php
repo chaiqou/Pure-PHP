@@ -1,6 +1,10 @@
 <?php
+require_once __DIR__ . "/vendor/autoload.php";
 
-require_once "Transaction.php";
+ini_set("display_errors", 1);
+error_reporting(~0);
+
+use App\Transaction;
 
 // This is a Object class instance
 // Chanining რომ იყოს შესაძლებელი მეთოდიდან უნდა დავაბრუნოთ კლასის ინსტანსი ანუ $this ,ასევე new ინსტანსი უნდა ჩავსვათ ფრჩხილებში

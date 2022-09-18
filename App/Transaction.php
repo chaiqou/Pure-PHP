@@ -1,6 +1,7 @@
 <?php
-
 declare(strict_types=1);
+
+namespace App;
 
 // this is class
 
@@ -35,5 +36,10 @@ class Transaction
     public function getAmount(): float
     {
         return $this->amount;
+    }
+
+    public function getDescription(): string
+    {
+        return $this->description;
     }
 }

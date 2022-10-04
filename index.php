@@ -1,15 +1,28 @@
 <?php
-require_once __DIR__ . "/vendor/autoload.php";
 
-ini_set("display_errors", 1);
-error_reporting(~0);
+$books = [
+  [
+    "name" => "Do Androids Dream of Electric Sheep",
+    "author" => "Philip K. Dick",
+    "releaseYear" => 1968,
+    "purchaseUrl" => "http://example.com",
+  ],
+  [
+    "name" => "Project Hail Mary",
+    "author" => "Andy Weir",
+    "releaseYear" => 2021,
+    "purchaseUrl" => "http://example.com",
+  ],
+  [
+    "name" => "The Martian",
+    "author" => "Andy Weir",
+    "releaseYear" => 2011,
+    "purchaseUrl" => "http://example.com",
+  ],
+];
 
-use App\Transaction;
+$filteredBooks = array_filter($books, function ($book) {
+  return $book["releaseYear"] >= 1950 && $book["releaseYear"] <= 2020;
+});
 
-// This is a Object class instance
-// Chanining რომ იყოს შესაძლებელი მეთოდიდან უნდა დავაბრუნოთ კლასის ინსტანსი ანუ $this ,ასევე new ინსტანსი უნდა ჩავსვათ ფრჩხილებში
-$transaction = (new Transaction(100, "new transaction 1"))
-    ->addTax(8)
-    ->addDiscount(10);
-
-var_dump($transaction->getAmount());
+require_once "index.view.php";

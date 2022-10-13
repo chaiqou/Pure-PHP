@@ -25,4 +25,6 @@ $filteredBooks = array_filter($books, function ($book) {
   return $book["releaseYear"] >= 1950 && $book["releaseYear"] <= 2020;
 });
 
-require_once "index.view.php";
+$heading = 'Index';
+
+require_once "views/index.view.php";

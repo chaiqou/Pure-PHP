@@ -1,30 +1,5 @@
-<?php
+<?php 
 
-$books = [
-  [
-    "name" => "Do Androids Dream of Electric Sheep",
-    "author" => "Philip K. Dick",
-    "releaseYear" => 1968,
-    "purchaseUrl" => "http://example.com",
-  ],
-  [
-    "name" => "Project Hail Mary",
-    "author" => "Andy Weir",
-    "releaseYear" => 2021,
-    "purchaseUrl" => "http://example.com",
-  ],
-  [
-    "name" => "The Martian",
-    "author" => "Andy Weir",
-    "releaseYear" => 2011,
-    "purchaseUrl" => "http://example.com",
-  ],
-];
+require 'functions.php';
+require 'router.php';
 
-$filteredBooks = array_filter($books, function ($book) {
-  return $book["releaseYear"] >= 1950 && $book["releaseYear"] <= 2020;
-});
-
-$heading = 'Index';
-
-require_once "views/index.view.php";

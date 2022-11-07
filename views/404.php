@@ -9,6 +9,9 @@
             <a href="/" class="text-blue-500 underline">Go back home.</a>
         </p>
     </div>
+    <p>test git</p>
+    <p>test 2</p>
+    <p>sdadas</p>
 </main>
 
 <?php require('partials/footer.php') ?>
